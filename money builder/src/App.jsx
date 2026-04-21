@@ -34,7 +34,7 @@ function App() {
       deleteTransaction={deleteTransaction}
       />
       {/* Form to add new transction*/}
-      <AddTransaction AddTransaction={addTransaction}/>
+      <AddTransaction addTransaction={addTransaction}/>
     </div>
   );
 }

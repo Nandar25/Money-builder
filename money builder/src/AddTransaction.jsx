@@ -5,9 +5,12 @@ function AddTransaction({ addTransaction }) {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState("");
 
+
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault(); // Stop page refresh
+    console.log("Form submitted"); 
 
     // Check if fields are empty
     if (!text || !amount) return;
@@ -48,6 +51,8 @@ function AddTransaction({ addTransaction }) {
         />
 
         <button type="submit">Add</button>
+
+        
       </form>
     </div>
   );

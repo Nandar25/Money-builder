@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 
 //This connect React to the HTNL file (index.html)
+//It finds the root div and renders our App inside it
 ReactDOM.createRoot(document.getElementById('root')).render(
 
 

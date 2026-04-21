@@ -26,7 +26,13 @@ function App() {
       <Header/>
       {/*Show balance and pass data as props*/}
       <Balance balance={balance}/>
+      <TransactionList
+      transactions={transactions}
+      deleteTransaction={deleteTransaction}
+      />
+      {/* Form to add new transction*/}
+      <AddTransaction AddTransaction={addEventListener}/>
     </div>
-  )
+  );
 }
-export default App
+export default App;

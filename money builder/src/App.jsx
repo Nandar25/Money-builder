@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import Header from "./Header";
-import Balance from "./Balance";
+import Header from './Header';
+import Balance from './Balance';
 import TransactionList from './TransactionList';
+import AddTransaction from './AddTransaction';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
 
-  const AddTransaction=(transactions)=>{
-    setTransactions([...transactions, transactions]);
+  const addTransaction=(transaction)=>{
+    setTransactions([...transactions, transaction]);
   };
   //function to add delete transaction
   const deleteTransaction= (id)=> {
@@ -16,7 +17,7 @@ function App() {
   };
   const amounts = transactions.map((t)=> t.amount);
   //calculate total balance
-  const balance= amount.reduce((acc, item)=> acc+item, 0);
+  const balance= amounts.reduce((acc, item)=> acc + item, 0);
   return(
     <div className='container'>
       {/*Display app title*/}
@@ -28,7 +29,7 @@ function App() {
       deleteTransaction={deleteTransaction}
       />
       {/* Form to add new transction*/}
-      <AddTransaction AddTransaction={addEventListener}/>
+      <AddTransaction AddTransaction={addTransaction}/>
     </div>
   );
 }

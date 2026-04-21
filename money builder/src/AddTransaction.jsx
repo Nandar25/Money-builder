@@ -47,7 +47,7 @@ function AddTransaction({ addTransaction }) {
           onChange={(e) => setAmount(e.target.value)} // update state
         />
 
-        <button>Add</button>
+        <button type="submit">Add</button>
       </form>
     </div>
   );

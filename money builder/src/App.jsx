@@ -5,19 +5,24 @@ import TransactionList from './TransactionList';
 import AddTransaction from './AddTransaction';
 
 function App() {
+  // Create state to store all transactions
+  // Starts as an empty array []
   const [transactions, setTransactions] = useState([]);
 
-  const addTransaction=(transaction)=>{
+  // Function to add a new transaction
+  const addTransaction = (transaction) => {
+    // Add new transaction to existing ones
     setTransactions([...transactions, transaction]);
   };
   //function to add delete transaction
-  const deleteTransaction= (id)=> {
+  const deleteTransaction = (id)=> {
     //keep all items except the one we clicked
-    setTransactions(transactions.filter((t)=> t.id !== id));
+    setTransactions(transactions.filter((t) => t.id !== id));
   };
-  const amounts = transactions.map((t)=> t.amount);
+  // Get all amounts from transactions
+  const amounts = transactions.map((t) => t.amount);
   //calculate total balance
-  const balance= amounts.reduce((acc, item)=> acc + item, 0);
+  const balance = amounts.reduce((acc, item) => acc + item, 0);
   return(
     <div className='container'>
       {/*Display app title*/}

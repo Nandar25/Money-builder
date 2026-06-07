@@ -44,10 +44,6 @@ https://github.com/Nandar25/Money-builder.git
 
 ---
 
- Live Demo
-(Add your deployed link here after using Vercel or Netlify)
-
----
  Challenges
 At the beginning, I found it difficult to understand how state works and how to pass functions between components. I also had some errors when connecting my components, but I fixed them by checking my props and function names.
 
